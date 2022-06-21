@@ -1,0 +1,52 @@
+<div class="jumbotron">
+
+    <form>
+        <fieldset>
+            <h2>Insira os dados abaixo:</h2>
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <select ng-model="reserva.cliente" ng-options="cliente.nome for cliente in clientes"
+                    class="form-control"></select>
+
+            </div>
+
+            <table class="table table">
+                <tr>
+                    <th></th>
+                    <th><a>Nome</a></th>
+                    <th><a>Classificação(Anos)</a></th>
+                    <th><a>Status</a></th>
+                </tr>
+                <tr ng-repeat="filme in disponiveis">
+                    <td><input type="checkbox" ng-model="filme.selecionado" /></td>
+                    <td>{{filme.nome}}</td>
+                    <td>{{filme.classificacao}}</td>
+                    <td>{{filme.status}}</td>
+                </tr>
+            </table>
+
+            <button ng-click="adicionarReserva(reserva)" class="btn btn-primary btn-block">Alugar Filme</button>
+        </fieldset>
+
+        <!-- <pre>{{ reserva | json }}</pre> -->
+    </form>
+    <table class="table table">
+        <legend>Filmes Alugados:</legend>
+        <tr>
+            <th><a>Cliente</a></th>
+            <th><a>Filmes</a></th>
+            <th>Status</th>
+        </tr>
+        <tr ng-repeat="reserva in reservados">
+            <td>{{ reserva.cliente.nome }}</td>
+            <td>
+                <span ng-repeat="filme in reserva.filmes">
+                    [{{ filme.nome }}]
+                </span>
+            </td>
+            <td>{{ reserva.status }}</td>
+            <td><button ng-click="devolverReserva(reserva)" class="btn btn-danger">Dar baixa</button></td>
+        </tr>
+
+    </table>
+</div>

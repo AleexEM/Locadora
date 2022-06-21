@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <h1 class="text-center">Catalogo de Filmes</h1></br>
+
+    <table class="table table">
+        <tr>
+            <th></th>
+            <th><a>Nome</a></th>
+            <th><a>Classificação(Anos)</a></th>
+            <th><a>Genero</a></th>
+        </tr>
+        <tr ng-repeat="filme in filmes">
+            <td><input type="checkbox" ng-model="filme.selecionado" /></td>
+            <td>{{filme.nome}}</td>
+            <td>{{filme.classificacao}}</td>
+            <td>{{filme.genero}}</td>
+            <td><button ng-click="editarFilme(filme)" class="btn btn-light btn-sm">Editar Filme</button></td>
+        </tr>
+    </table>
+
+
+    <input class="form-control" type="text" ng-model="filme.nome" placeholder="Insira o nome do filme"></br>
+    <input class="form-control" type="text" ng-model="filme.classificacao" placeholder="Classificacao"></br>
+    <input class="form-control" type="text" ng-model="filme.genero" placeholder="Genero"></br>
+
+    <button ng-click="adicionarFilme(filme)" class="btn btn-block btn-primary">Salvar Filme</button>
+    <button ng-click="apagarFilmes(filmes)" class="btn btn-block btn-danger">Apagar</button>
+
+</div>

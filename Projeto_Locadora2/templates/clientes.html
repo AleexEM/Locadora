@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <h1 class="text-center">Lista de Clientes</h1></br>
+
+    <table class="table table">
+        <tr>
+            <th></th>
+            <th><a>Nome</a></th>
+            <th><a>Idade</a></th>
+            <th><a>CPF</a></th>
+        </tr>
+        <tr ng-repeat="cliente in clientes">
+            <td><input type="checkbox" ng-model="cliente.selecionado" /></td>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.idade + " anos"}}</td>
+            <td>{{cliente.cpf}}</td>
+            <td><button ng-click="editarCliente(cliente)" class="btn btn-light btn-sm">Editar Cliente</button></td>
+        </tr>
+    </table> 
+    
+
+    <input class="form-control" type="text" ng-model="cliente.nome" placeholder="Insira o nome do cliente"></br>
+    <input class="form-control" type="text" ng-model="cliente.idade" placeholder="Insira a idade do cliente"></br>
+    <input class="form-control" type="text" ng-model="cliente.cpf" placeholder="Insira o CPF do cliente"></br>
+
+    <button ng-click="adicionarCliente(cliente)" class="btn btn-block btn-primary">Salvar Cliente</button>
+    <button ng-click="apagarClientes(clientes)" class="btn btn-block btn-danger">Apagar</button>
+
+</div>

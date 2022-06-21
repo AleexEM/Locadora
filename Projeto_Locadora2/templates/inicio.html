@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <h1 class="text-center">Catalogo de Filmes</h1></br>
+    <table class="table table">
+        <tr>
+            <th><a>Nome</a></th>
+            <th><a>Classificação</a></th>
+            <th><a>Status</a></th>
+        </tr>
+        <tr ng-repeat="filme in filmes">
+            <td>{{filme.nome}}</td>
+            <td>{{filme.classificacao}}</td>
+            <td>{{filme.status}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,39 @@
+.jumbotron {
+    background-color:rgb(18, 0, 26);
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    color: white;
+}
+.table {
+    color: white;
+}
+
+
+footer {
+    background: rgb(18, 0, 26);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+
+.navbar {
+    background-color: rgb(18, 0, 26);
+}
+
+.btn-danger{
+    background-color: rgb(27, 0, 38);
+    border: rgb(255, 255, 255);
+}
+.btn-primary{
+    background-color: rgb(27, 0, 38);
+    border: rgb(254, 254, 254);    
+}
+
+.modal {
+    color: black;
+}
